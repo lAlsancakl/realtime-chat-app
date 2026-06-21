@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include("./inc/head")%>
+</head>
+<body style="background: linear-gradient(to right, #0089a6, #00b87b);">
+    
+    <section class="login-section">
+        <form action="" method="post" class="login-form">
+            <h1 class="login-h1">Login</h1>
+            <input type="text" name="username" placeholder="Kullanıcı adı" required id="">
+            <input type="password" name="password" placeholder="Parola" required id="">
+            <input type="submit" value="Giriş Yap">
+            <p class="login-p"><a href="signup" class="login-a">Hesabınız yoksa kayıt olun</a></p>
+        </form>
+    </section>
+    <% if (typeof message !== 'undefined') { %>
+        <script>
+            alert("<%= message %>");
+        </script>
+    <% } %>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./inc/head") %> <link rel="stylesheet" href="/style.css"> </head>
+<body>
+
+    <div id="main-wrap">
+        
+        <div id="chat-wrap">
+            
+            <h2 class="index-h2">
+                Alsancak Chat
+                <button class="logout-btn">
+                    <a class="logout-href" href="/logout">Logout</a>
+                </button>
+            </h2>
+            
+            <div id="chat-window">
+                <div id="output"></div> <div id="feedback"></div> </div>
+            
+            <div class="input-area">
+                <input class="Ad" type="text" id="sender" value="Yükleniyor..." disabled>
+                <input class="Mesaj" type="text" id="message" placeholder="Mesaj">
+                <button class="submitBtn" id="submitBtn">Gönder</button>
+            </div>
+
+        </div>
+
+        <div id="user-list-container">
+            <h3>Aktifler</h3>
+            <ul id="user-list">
+                </ul>
+        </div>
+
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io(); // Bağlantıyı başlat
+        
+        // Kullanıcı adını başlangıçta iste
+        socket.emit("getUsername");
+    </script>
+    
+    <script src="/chat.js"></script>
+
+</body>
+</html>
