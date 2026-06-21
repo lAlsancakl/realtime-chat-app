@@ -35,3 +35,4 @@ Follow these simple steps to get the project running locally on your machine:
    ```bash
    git clone [https://github.com/lAlsancakl/realtime-chat-app.git](https://github.com/lAlsancakl/realtime-chat-app.git)
    cd realtime-chat-app
+   node server.js
